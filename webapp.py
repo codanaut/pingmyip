@@ -25,10 +25,21 @@ def home():
 @app.route("/txt", methods=["GET"])
 def get_ip():
     return request.remote_addr, 200
+    
 
 @app.route("/json", methods=["GET"])
 def json_ip():
     return jsonify({'ip': request.remote_addr}), 200
+
+@app.route('/test')
+def test():
+
+    if request.headers.getlist("X-Forwarded-For"):
+        ip = request.headers.getlist("X-Forwarded-For")[0]
+    else:
+        ip = request.remote_addr
+
+    return render_template('index.html', ip=ip)
 
 
 if __name__ == '__main__':
