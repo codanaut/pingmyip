@@ -6,10 +6,10 @@
 
 The API currently returns both JSON and TXT. 
 
-[JSON - http://pingmyip.io/json](http://pingmyip.io/json) 
+[JSON - pingmyip.io/json](https://pingmyip.io/json) 
 
 
-[TXT - http://pingmyip.io/txt](http://pingmyip.io/txt) 
+[TXT - pingmyip.io/txt](https://pingmyip.io/txt) 
 
 
 ## Self-hosting
