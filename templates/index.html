@@ -1,42 +1,54 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
 <title>PingMyIP.IO</title>
 </head>
-<body class="bg-dark text-success">
+<body class="text-success text-center">
     <div class="container">
-        <br>
-        <div class="display-3 text-center">PINGMYIP.IO</div>
-        <br>
-        <div class="display-4 text-center pb-3">Your IP:</div>
+        <div class="section-1" id="ip">
+            <div class="display-3 mt-3"><a href="http://pingmyip.io">PINGMYIP.IO</a></div>
+            <div class="ip">
+                <div class="display-4 text-center pb-3">Your IP:</div>
+                <h1 class="text-center text-secondary">{{ip}}</h1>
+            </div>
+            <div class="">
+                <a href="#api">
+                    <i class="fa-solid fa-arrow-down fa-2xl"></i>
+                </a>
+            </div>
+        </div>
         
-        <!--<div><h1 class="text-center jumbotron bg-secondary">{{ip}}</h1></div>-->
-        <div><h1 class="text-center text-danger">{{ip}}</h1></div>
-        <br>
-        <div class="row text-center py-4">
-            <div class="col-md display-4">API</div>
-        </div>
-        <div class="row text-center my-2 w-75 mx-auto">
-            <div class="col-md">
-                <h4>JSON Return</h4>
-                <h4><a href="/json" >pingmyip.io/json</a></h4>
+        <div class="section-2" id="api">
+            <div class="row text-center mb-4">
+                <div class="col-md display-4">API</div>
             </div>
-            <div class="col-md">
-                <h4>Text Return</h4>
-                <h4><a href="/txt" >pingmyip.io/txt</a></h4>
+            <div class="row text-center my-2 w-75 mx-auto">
+                <div class="col-12 col-lg-6 mb-4">
+                    <h4>JSON</h4>
+                    <code class="text-secondary"><a href="/json" >pingmyip.io/json</a></code>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h4>TXT</h4>
+                    <code class="text-secondary"><a href="/txt" >pingmyip.io/txt</a></code>
+                </div>
             </div>
-        </div>
-        <div class="row text-center">
-            
-        </div>
+
+            <div id="About" class="container-fluid text-center mt-4">
+                <div class="display-4">About</div>
+                <div class="text-secondary"><span class="h4 text-success">pingmyip.io</span> is a free and open source API that allows you to check your public IP address. There are currently no limits on the number of calls you can make, but we ask that you keep calls within reason.</div>
+                <div class="text-secondary mt-2">If you'd like to self-host your own instance, check out the project on <a href="" class="text-success">GitHub.</a></GitHub.></div>
+            </div>
+       </div>
+       <a href="#ip">
+            <i class="fa-solid fa-arrow-up fa-2xl"></i>
+        </a>
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>
