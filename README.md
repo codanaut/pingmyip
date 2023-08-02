@@ -1,8 +1,15 @@
-# pingmyip
+# pingmyip.io
 
-[pingmyip.io](http://pingmyip.io) is a free and open source API that allows you to check your public IP address. There are currently no limits on the number of calls you can make, but we ask that you keep calls within reason.
+**[pingmyip.io](http://pingmyip.io)** is a free and open source API that allows you to check your public IP address. There are currently no limits on the number of calls you can make, but we ask that you keep calls within reason.
 
-If you'd like to self-host your own instance, check out the project on GitHub.
+## Usage
+
+The API currently returns both JSON and TXT. 
+
+[JSON - http://pingmyip.io/json](http://pingmyip.io/json) 
+
+
+[TXT - http://pingmyip.io/txt](http://pingmyip.io/txt) 
 
 
 ## Self-hosting
